@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b1f5f2;
+  background: #fffffb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3134,4 +3134,16 @@ ul.breadcrumb li+li:last-child {
   .pagination {
     margin: 8px 0 0;
   }
+}
+::selection {
+  background: #4682b4;
+  color: #fff;
+}
+::-moz-selection {
+  background: #33a183;
+  color: #fff;
+}
+::-webkit-selection {
+  background: #33a183;
+  color: #fff;
 }
