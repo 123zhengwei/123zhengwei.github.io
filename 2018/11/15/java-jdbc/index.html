@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>tags | Fingerprint</title>
+  <title>JDBC操作mysql实例 | Fingerprint</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="智能生活">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+  <meta name="description" content="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)于是就选用了JDBC用java来对mysql进行操作">
+<meta name="keywords" content="java学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JDBC操作mysql实例">
+<meta property="og:url" content="http://yoursite.com/2018/11/15/java-jdbc/index.html">
 <meta property="og:site_name" content="Fingerprint">
+<meta property="og:description" content="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)于是就选用了JDBC用java来对mysql进行操作">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-13T10:11:00.547Z">
+<meta property="og:image" content="https://s1.ax1x.com/2018/11/15/iv3mDI.png">
+<meta property="og:updated_time" content="2018-11-16T17:24:54.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
+<meta name="twitter:title" content="JDBC操作mysql实例">
+<meta name="twitter:description" content="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)于是就选用了JDBC用java来对mysql进行操作">
+<meta name="twitter:image" content="https://s1.ax1x.com/2018/11/15/iv3mDI.png">
   
     <link rel="alternative" href="/atom.xml" title="Fingerprint" type="application/atom+xml">
   
@@ -168,20 +173,20 @@ ga('send', 'pageview');
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="page-" class="article article-type-page " itemscope="" itemprop="blogPost">
+            <article id="post-java-jdbc" class="article article-type-post " itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      tags
+      JDBC操作mysql实例
     </h1>
   
 
         
-        <a href="/tags/index.html" class="archive-article-date">
-  	<time datetime="2018-11-13T10:11:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-13</time>
+        <a href="/2018/11/15/java-jdbc/" class="archive-article-date">
+  	<time datetime="2018-11-15T10:32:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-15</time>
 </a>
          <!-- 开始添加字数统计-->
          
@@ -190,7 +195,7 @@ ga('send', 'pageview');
       <span class="post-meta-item-icon">
         <i class="fa fa-keyboard-o"></i>
         <span class="post-meta-item-text">  字数统计: </span>
-        <span class="post-count">0字</span>
+        <span class="post-count">656字</span>
       </span>
     </span>
 
@@ -199,7 +204,7 @@ ga('send', 'pageview');
       <span class="post-meta-item-icon">
         <i class="fa fa-hourglass-half"></i>
         <span class="post-meta-item-text">  阅读时长: </span>
-        <span class="post-count">1分</span>
+        <span class="post-count">3分</span>
       </span>
     </span>
 </div>
@@ -216,7 +221,10 @@ ga('send', 'pageview');
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="学习了mysql-厌倦了在黑框里敲各种sql语句-错了还不好修改是原罪"><a href="#学习了mysql-厌倦了在黑框里敲各种sql语句-错了还不好修改是原罪" class="headerlink" title="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)"></a>学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)</h1><h2 id="于是就选用了JDBC用java来对mysql进行操作"><a href="#于是就选用了JDBC用java来对mysql进行操作" class="headerlink" title="于是就选用了JDBC用java来对mysql进行操作"></a>于是就选用了JDBC用java来对mysql进行操作</h2><a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line">package link;</span><br><span class="line">import java.sql.*;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">* 使用JDBC连接数据库MySQL的过程</span><br><span class="line">* DataBase：zw， table：student；</span><br><span class="line">* 使用myeclipse对mysql数据库进行增删改查的基本操作。</span><br><span class="line">*/</span><br><span class="line"></span><br><span class="line">public class JDBCTest &#123;</span><br><span class="line">    public static Connection getConnection() throws SQLException,</span><br><span class="line">    	java.lang.ClassNotFoundException</span><br><span class="line">    	&#123;</span><br><span class="line">    	//第一步：加载MySQL的JDBC的驱动</span><br><span class="line">    	Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    	//取得连接的url,能访问MySQL数据库的用户名,密码:admin;数据库名:zw</span><br><span class="line">    	String url = &quot;jdbc:mysql://localhost:3306/zw&quot;;</span><br><span class="line">    	String username = &quot;root&quot;;</span><br><span class="line">    	String password = &quot;admin&quot;;</span><br><span class="line">    </span><br><span class="line">    	//第二步：创建与MySQL数据库的连接类的实例</span><br><span class="line">    	Connection con = DriverManager.getConnection(url, username, password);</span><br><span class="line">    	return con;</span><br><span class="line">    	&#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    public static void main(String args[]) &#123;</span><br><span class="line">    	try&#123;</span><br><span class="line">    		//第三步：获取连接类实例con，用con创建Statement对象类实例 sql_statement</span><br><span class="line">    		Connection con = getConnection();</span><br><span class="line">    		Statement sql_statement = con.createStatement();</span><br><span class="line">    </span><br><span class="line">    		//如果同名数据库存在，删除</span><br><span class="line">    		sql_statement.executeUpdate(&quot;drop table if exists student&quot;);</span><br><span class="line">    		//执行了一个sql语句生成了一个名为student的表</span><br><span class="line">    		sql_statement.executeUpdate(&quot;create table student (Sno char(10) primary key,Sname char(20) unique,Ssex char(4),Sage smallint,Sdept char(20) ); &quot;);</span><br><span class="line">    </span><br><span class="line">    		//向student表中插入数据</span><br><span class="line">    		sql_statement.executeUpdate(&quot;insert student values(&apos;B16060901&apos;,&apos;郑伟&apos;,&apos;男&apos;,21,&apos;CS&apos;)&quot;);</span><br><span class="line">    		sql_statement.executeUpdate(&quot;insert student values(&apos;B16060902&apos;,&apos;王伟&apos;,&apos;男&apos;,20,&apos;AS&apos;)&quot;);</span><br><span class="line">    		sql_statement.executeUpdate(&quot;insert student values(&apos;B16060903&apos;,&apos;张伟&apos;,&apos;男&apos;,21,&apos;BS&apos;)&quot;);</span><br><span class="line">    		sql_statement.executeUpdate(&quot;insert student values(&apos;B16060904&apos;,&apos;刘伟&apos;,&apos;女&apos;,20,&apos;CS&apos;)&quot;);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    		//第四步：执行查询，用ResultSet类的对象，返回查询的结果</span><br><span class="line">    		String query = &quot;select * from student&quot;;</span><br><span class="line">    		ResultSet result = sql_statement.executeQuery(query);</span><br><span class="line">    </span><br><span class="line">    		//显示数据中student表中的内容：</span><br><span class="line">    		System.out.println(&quot;student表中的数据如下:&quot;);</span><br><span class="line">    		System.out.println(&quot;------------------------------------------------------&quot;);</span><br><span class="line">    		System.out.println(&quot;\t序号\t\t姓名\t性别\t年龄\t所在系&quot;);</span><br><span class="line">    		System.out.println(&quot;------------------------------------------------------&quot;);</span><br><span class="line">    	</span><br><span class="line">    		//对获得的查询结果进行处理，对Result类的对象进行操作</span><br><span class="line">    		while (result.next())&#123;</span><br><span class="line">    			String number = result.getString(&quot;Sno&quot;);</span><br><span class="line">    			String name = result.getString(&quot;Sname&quot;);</span><br><span class="line">    			String sex = result.getString(&quot;Ssex&quot;);</span><br><span class="line">    			int age = result.getInt(&quot;Sage&quot;);</span><br><span class="line">    			String dept= result.getString(&quot;Sdept&quot;);</span><br><span class="line">    </span><br><span class="line">    		//取得数据库中的数据</span><br><span class="line">    		System.out.println(&quot;\t&quot;+ number + &quot;\t&quot; + name + &quot;\t&quot; + sex + &quot;\t&quot; + age + &quot;\t&quot; + dept +&quot;\t&quot;);</span><br><span class="line">    		&#125;</span><br><span class="line">    </span><br><span class="line">    		//第五步关闭连接和声明 这点很重要,不要忘记</span><br><span class="line">    		sql_statement.close();</span><br><span class="line">    		con.close();</span><br><span class="line">    </span><br><span class="line">    		&#125; catch(java.lang.ClassNotFoundException e) &#123;</span><br><span class="line">    			System.err.print(&quot;ClassNotFoundException&quot;);</span><br><span class="line">    			System.err.println(e.getMessage());</span><br><span class="line">    			&#125; catch (SQLException ex) &#123;</span><br><span class="line">    				ex.printStackTrace();</span><br><span class="line">    			&#125;</span><br><span class="line">    	&#125; </span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="如果对eclipse-myeclipse连接mysql不是很清楚可以参考CSDN"><a href="#如果对eclipse-myeclipse连接mysql不是很清楚可以参考CSDN" class="headerlink" title="如果对eclipse/myeclipse连接mysql不是很清楚可以参考CSDN"></a>如果对eclipse/myeclipse连接mysql不是很清楚可以参考<a href="https://blog.csdn.net/qq_35134075/article/details/78367442" target="_blank">CSDN</a></h1><h2 id="连接关键就是对这张表的配置"><a href="#连接关键就是对这张表的配置" class="headerlink" title="连接关键就是对这张表的配置"></a>连接关键就是对这张表的配置</h2><p> <img src="https://s1.ax1x.com/2018/11/15/iv3mDI.png" alt="iv3mDI.png"></p>
+<h1 id="最后希望可以在你java学习道路上帮一点小忙"><a href="#最后希望可以在你java学习道路上帮一点小忙" class="headerlink" title="最后希望可以在你java学习道路上帮一点小忙"></a>最后希望可以在你java学习道路上帮一点小忙</h1>
       
       
       
@@ -255,6 +263,17 @@ ga('send', 'pageview');
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">java学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -305,7 +324,7 @@ ga('send', 'pageview');
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/tags/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/15/java-jdbc/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -317,6 +336,25 @@ ga('send', 'pageview');
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2018/11/17/shengming/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          说明一哈^-^
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/11/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello! My friend.</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -342,8 +380,8 @@ ga('send', 'pageview');
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://yoursite.com/tags/index.html", 
-    sourceId: "",
+    url: "http://yoursite.com/2018/11/15/java-jdbc/", 
+    sourceId: "java-jdbc",
     productKey: "ture",
     target: "cloud-tie-wrapper"
   };
@@ -354,7 +392,7 @@ ga('send', 'pageview');
 
 
   
-  <div id="SOHUCS" sid=""></div> 
+  <div id="SOHUCS" sid="java-jdbc"></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js"></script>
 <script type="text/javascript">
     window.changyan.api.config({
@@ -415,7 +453,7 @@ ga('send', 'pageview');
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
