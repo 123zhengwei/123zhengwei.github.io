@@ -17,7 +17,7 @@
 <meta property="og:description" content="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)于是就选用了JDBC用java来对mysql进行操作">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://s1.ax1x.com/2018/11/15/iv3mDI.png">
-<meta property="og:updated_time" content="2018-11-16T17:24:54.218Z">
+<meta property="og:updated_time" content="2018-11-17T07:38:03.572Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JDBC操作mysql实例">
 <meta name="twitter:description" content="学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)于是就选用了JDBC用java来对mysql进行操作">
@@ -224,6 +224,30 @@ ga('send', 'pageview');
     
     <!-- 目录内容 -->
 
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#学习了mysql-厌倦了在黑框里敲各种sql语句-错了还不好修改是原罪"><span class="toc-number">1.</span> <span class="toc-text">学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#于是就选用了JDBC用java来对mysql进行操作"><span class="toc-number">1.1.</span> <span class="toc-text">于是就选用了JDBC用java来对mysql进行操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如果对eclipse-myeclipse连接mysql不是很清楚可以参考CSDN"><span class="toc-number">2.</span> <span class="toc-text">如果对eclipse/myeclipse连接mysql不是很清楚可以参考CSDN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#连接关键就是对这张表的配置"><span class="toc-number">2.1.</span> <span class="toc-text">连接关键就是对这张表的配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后希望可以在你java学习道路上帮一点小忙"><span class="toc-number">3.</span> <span class="toc-text">最后希望可以在你java学习道路上帮一点小忙</span></a></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+      
 <!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
@@ -374,6 +398,19 @@ ga('send', 'pageview');
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#学习了mysql-厌倦了在黑框里敲各种sql语句-错了还不好修改是原罪"><span class="toc-number">1.</span> <span class="toc-text">学习了mysql,厌倦了在黑框里敲各种sql语句(错了还不好修改是原罪)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#于是就选用了JDBC用java来对mysql进行操作"><span class="toc-number">1.1.</span> <span class="toc-text">于是就选用了JDBC用java来对mysql进行操作</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#如果对eclipse-myeclipse连接mysql不是很清楚可以参考CSDN"><span class="toc-number">2.</span> <span class="toc-text">如果对eclipse/myeclipse连接mysql不是很清楚可以参考CSDN</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#连接关键就是对这张表的配置"><span class="toc-number">2.1.</span> <span class="toc-text">连接关键就是对这张表的配置</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#最后希望可以在你java学习道路上帮一点小忙"><span class="toc-number">3.</span> <span class="toc-text">最后希望可以在你java学习道路上帮一点小忙</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
