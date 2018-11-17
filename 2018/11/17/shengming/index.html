@@ -220,6 +220,33 @@ ga('send', 'pageview');
         阅读量 <span id="busuanzi_value_page_pv"></span>
       </span>
     
+    <!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+    <div id="toc-article" class="toc-article">
+        <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+        <strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#注意-这不是QQ空间"><span class="toc-number">1.</span> <span class="toc-text">注意!这不是QQ空间</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#不是QQ空间"><span class="toc-number">1.1.</span> <span class="toc-text">不是QQ空间</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#不是QQ空间-1"><span class="toc-number">1.1.1.</span> <span class="toc-text">不是QQ空间</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#重要的话说三遍-哈哈"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">(重要的话说三遍,哈哈)</span></a></li></ol></li></ol></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+    function showToc(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:block");
+        show_toc_btn.setAttribute("style","display:none");
+        };
+    function showBtn(){
+        var toc_article = document.getElementById("toc-article");
+        var show_toc_btn = document.getElementById("show-toc-btn");
+        toc_article.setAttribute("style","display:none");
+        show_toc_btn.setAttribute("style","display:block");
+        };
+   </script>
+      
+<!-- 目录内容结束 -->
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="注意-这不是QQ空间"><a href="#注意-这不是QQ空间" class="headerlink" title="注意!这不是QQ空间"></a>注意!这不是QQ空间</h1><a id="more"></a>
@@ -527,11 +554,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">哈哈</a>
+                <a href="javascript:void(0)" class="js-tag color2">java学习</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">java学习</a>
+                <a href="javascript:void(0)" class="js-tag color3">哈哈</a>
               </li>
             
             <div class="clearfix"></div>
