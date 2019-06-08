@@ -15,20 +15,18 @@
 
 
 
-<meta name="description" content="Welcome to ZW blog.">
-<meta name="keywords" content="智能生活">
+<meta name="description" content="数组">
+<meta name="keywords" content="java学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello! My friend.">
-<meta property="og:url" content="http://yoursite.com/2018/11/13/hello-world/index.html">
+<meta property="og:title" content="java基础（三）">
+<meta property="og:url" content="http://yoursite.com/2019/06/08/java003/index.html">
 <meta property="og:site_name" content="Fingerprint">
-<meta property="og:description" content="Welcome to ZW blog.">
+<meta property="og:description" content="数组">
 <meta property="og:locale" content="zh-HANS">
-<meta property="og:image" content="https://s1.ax1x.com/2018/11/15/ivKvwT.jpg">
-<meta property="og:updated_time" content="2018-11-17T07:38:01.546Z">
+<meta property="og:updated_time" content="2019-06-08T10:27:59.789Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello! My friend.">
-<meta name="twitter:description" content="Welcome to ZW blog.">
-<meta name="twitter:image" content="https://s1.ax1x.com/2018/11/15/ivKvwT.jpg">
+<meta name="twitter:title" content="java基础（三）">
+<meta name="twitter:description" content="数组">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -60,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hello! My friend. | Fingerprint</title>
+<title>java基础（三） | Fingerprint</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -270,11 +268,11 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-java003" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2018/11/13/hello-world/" class="article-date">
-      <time datetime="2018-11-13T04:19:49.540Z" itemprop="datePublished">2018-11-13</time>
+      <a href="/2019/06/08/java003/" class="article-date">
+      <time datetime="2019-06-08T09:00:00.000Z" itemprop="datePublished">2019-06-08</time>
 </a>
 
 
@@ -289,7 +287,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello! My friend.
+      java基础（三）
     </h1>
   
 
@@ -299,7 +297,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-keyboard-o"></i>
       <span class="post-meta-item-text">  字数统计: </span>
-      <span class="post-count">4字</span>
+      <span class="post-count">606字</span>
     </span>
   </span>
 
@@ -308,7 +306,7 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-hourglass-half"></i>
       <span class="post-meta-item-text">  阅读时长: </span>
-      <span class="post-count">1分</span>
+      <span class="post-count">2分</span>
     </span>
   </span>
 </div>
@@ -323,6 +321,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java学习/">java学习</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -330,12 +332,18 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to ZW blog.<br><a id="more"></a></p>
-<p><img src="https://s1.ax1x.com/2018/11/15/ivKvwT.jpg" alt=""></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=474435512&auto=1&height=66"></iframe>
-
-
-
+        <h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><a id="more"></a>
+<h3 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h3><p>1.声明数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">数据类型[ ] 数组名;   //或者: 数据类型 数组名[ ];</span><br><span class="line">eg:</span><br><span class="line">int ages[];      //存放年龄的数组，类型为整型</span><br><span class="line">char symbol[];   //存放符号的数组，类型为字符型</span><br><span class="line">String [] name;  //存放名称的数组，类型为字符串型</span><br></pre></td></tr></table></figure></p>
+<p>2.创建数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">数组名 = new  数据类型 [ 数组长度 ];</span><br><span class="line">eg:</span><br><span class="line">int [] ages = &#123;12,18,9,33,45,60&#125;; //声明并初始化了一个整型数组，它有6个元素</span><br><span class="line">char [] symbol = new char[10] //声明并分配了一个长度为10的char型数组</span><br></pre></td></tr></table></figure></p>
+<h3 id="数组的遍历"><a href="#数组的遍历" class="headerlink" title="数组的遍历"></a>数组的遍历</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int [] ages = &#123;12, 18, 9, 33, 45, 60&#125;;</span><br><span class="line">for(int i = 0; i &lt; ages.length; i++)&#123; //ages.length是获取数组的长度</span><br><span class="line">    System.out.println(&quot;数组中第&quot;+(i+1)+&quot;个元素是 &quot;+ages[i]); //数组下标是从零开始，一定要注意</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>注意：<br>1.数组下标从 0 开始。所以数组的下标范围是 0 至 数组长度 -1。<br>2.数组不能越界访问，否则会报错。<br>3.for 语句在数组内可以使用特殊简化版本，在遍历数组、集合时，foreach 更简单便捷。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for(元素类型 元素变量:遍历对象)&#123;</span><br><span class="line">    执行的代码</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="数组的最值"><a href="#数组的最值" class="headerlink" title="数组的最值"></a>数组的最值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int maxNum = arr[0];</span><br><span class="line">int maxIndex = 0;</span><br><span class="line">for(int i = 0;i&lt;arr.length;i++)&#123;</span><br><span class="line">    if(arr[i]&gt;maxNum)&#123;</span><br><span class="line">        maxNum = arr[i];</span><br><span class="line">        maxIndex = i;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="数组的复制"><a href="#数组的复制" class="headerlink" title="数组的复制"></a>数组的复制</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.arraycopy(a,1,a1,0,4);</span><br><span class="line">内容依次是：源数组，源起始下标，目标数组，目起，要复制元素的个数；</span><br></pre></td></tr></table></figure>
+<h3 id="数组的扩容"><a href="#数组的扩容" class="headerlink" title="数组的扩容"></a>数组的扩容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = Arrays.copyof(a,a.length+1);</span><br></pre></td></tr></table></figure>
+<h3 id="将字符串→数组"><a href="#将字符串→数组" class="headerlink" title="将字符串→数组"></a>将字符串→数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[] input = str.tocharArray();</span><br></pre></td></tr></table></figure>
+<h3 id="随机数"><a href="#随机数" class="headerlink" title="随机数"></a>随机数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int num = (Math.random())*((右区间-左区间+1)+左区间); //[左区间,右区间)</span><br></pre></td></tr></table></figure>
+<h3 id="数组的排序"><a href="#数组的排序" class="headerlink" title="数组的排序"></a>数组的排序</h3><p>1.冒泡排序<br>相邻元素两两比较，大的往后放<br>C:记录比较次数<br>Cmin = n-1<br>Cmax = n(n-1)/2 = O(n^2)<br>M:记录移动次数<br>Mmin = 0<br>Mmax = 3n(n-1)/2= O(n^2)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class MPSort &#123;</span><br><span class="line">	</span><br><span class="line">	static int a[] = new int[10]</span><br><span class="line">	public MPSort()&#123;</span><br><span class="line">	&#125;</span><br><span class="line">    //冒泡排序</span><br><span class="line">	private void MaoPaoSort()&#123;</span><br><span class="line">		 </span><br><span class="line">		for (int i = 0;i&lt;a.length;i++)&#123;</span><br><span class="line">			a[i] = (int)(Math.random()*(21)+80);</span><br><span class="line">			for(int j = 0;j&lt;a.length-1;j++)&#123;</span><br><span class="line">				if(a[j]&gt;a[i])&#123;</span><br><span class="line">					int temp = a[j];</span><br><span class="line">					a[j] = a[i];</span><br><span class="line">					a[i] = temp;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		System.out.print(&quot;10个数最小到大依次排序为：&quot;);</span><br><span class="line">		for (int i: a)&#123;</span><br><span class="line">			System.out.print(&quot;  &quot;+i);</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	public static void main (String[] args)&#123;</span><br><span class="line">		</span><br><span class="line">		MPSort mp = new MPSort();</span><br><span class="line">		mp.MaoPaoSort();</span><br><span class="line">	</span><br><span class="line">		&#125;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>2.选择排序(冒泡改进)</p>
 
       
     </div>
@@ -347,12 +355,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2018/11/15/java-jdbc/">
-                    JDBC操作mysql实例
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2019/06/08/java002/">
+                    java基础（二）
                 </a>
             </div>
-        
         
     </nav>
 
@@ -362,7 +370,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#数组"><span class="toc-number">1.</span> <span class="toc-text">数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的定义"><span class="toc-number">1.1.</span> <span class="toc-text">数组的定义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的遍历"><span class="toc-number">1.2.</span> <span class="toc-text">数组的遍历</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的最值"><span class="toc-number">1.3.</span> <span class="toc-text">数组的最值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的复制"><span class="toc-number">1.4.</span> <span class="toc-text">数组的复制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的扩容"><span class="toc-number">1.5.</span> <span class="toc-text">数组的扩容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#将字符串→数组"><span class="toc-number">1.6.</span> <span class="toc-text">将字符串→数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#随机数"><span class="toc-number">1.7.</span> <span class="toc-text">随机数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#数组的排序"><span class="toc-number">1.8.</span> <span class="toc-text">数组的排序</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -398,7 +406,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Hello! My friend.　| Fingerprint　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"java基础（三）　| Fingerprint　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -440,15 +448,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/11/15/java-jdbc/" title="上一篇: JDBC操作mysql实例">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2019/06/08/java002/" title="下一篇: java基础（二）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
